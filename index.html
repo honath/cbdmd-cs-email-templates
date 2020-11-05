@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!-- ALexander Cooper -->
+<!-- 11/3/2020 -->
+<!-- This web page is intended to hold and organize email templates for use with cbdMD's Customer Support -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>cbdMD CS Email Templates</title>
+    <link 
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet" 
+      type="text/css" 
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" 
+    rel="stylesheet"
+    type = "text/css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="heading">
+        <h1>cbdMD CS Email Templates</h1>
+        <h2 id="disclaimer"><strong>PLEASE REMEMBER TO REVIEW THE EMAIL BEFORE SENDING, AND REPLACE ANY PLACEHOLDER TEXT</strong></h2>
+      </div>
+      <div> <!-- add more to list as sections are added -->
+        <ul class="categories">
+          <li>
+            <button class="cat-btns" onclick="changeSection('vet-med')">Veteran/Medical</button>
+          </li>
+          <li>
+            <button class="cat-btns" onclick="changeSection('shipping-issues')">Shipping</button>
+          </li>
+          <li>
+            <button class="cat-btns" onclick="changeSection('warehouse-comm')">WH Communication</button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Template displays -->
+    <main>
+      <!-- Welcome -->
+      <section id="welcome">
+        <p>
+          Welcome!<br>
+          <br>
+          If this is your first time using this page, <strong>please read the following before use:</strong><br>
+          <br>
+          This website serves as a compendium of emails that you, the customer service represenative, can use to communicate with customers quickly and efficiently.<br>
+          <strong>Please</strong> remember that these serve as <u>base templates</u> for your emails, and will require some editing and personalization, such as your own signature.<br>
+          As a general rule, most of these will have "NAME" in place of the relevant customer's name, and "YOURNAME" in place of where your name should be, but some will have additional fields for you to replace, so keep an eye out for them. The most common will be "ADDRESS", for the customer's shipping address.<br>
+          <br>
+          Double clicking the placeholder text that is in all caps will select that text, making it quick and easy to replace it! Easy, right?<br>
+          <br>
+          Good, don't mess it up. Crystal will yell at you, and the customer will be angry.<br>
+          <br>
+          <br>
+          Once you have read this, feel free to click any of the categories at the top to see the available templates. This disclaimer will disappear.<br>
+        </p>
+      </section>
+      <!-- Vet/med section -->
+      <section class="_hidden" id="vet-med">
+        <!-- Military Inquiry -->
+        <div>
+          <div class="internal-header">
+            <h3>Military Inquiry</h3>
+            <button class="copy-text" onclick = "copyToClipboard('mil-inq')">Copy</button>
+          </div>
+          <p id="mil-inq">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD and for your service! To qualify for the 30% veteran discount, please ensure you have an account and then send us a copy of your DD-214, a military ID, or any other documentation deeming you a veteran or active duty service member. Once we receive that, we will update your account to reflect the discount. The account name and name on the military documentation must match.<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- Military approved -->
+        <div>
+          <div class="internal-header">
+            <h3>Military Approved</h3>
+            <button class="copy-text" onclick = "copyToClipboard('mil-approved')">Copy</button>
+          </div>
+          <p id="mil-approved">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD and for your service! We have reviewed the document you have provided and have approved your account for the veteran discount. To ensure you receive the 30% discount on your purchases, you must be logged into your account when placing your order, and the order may only be shipped to the account holder's address.<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- Disability inquiry -->
+        <div>
+          <div class="internal-header">
+            <h3>Disability Inquiry</h3>
+            <button class="copy-text" onclick = "copyToClipboard('dis-inq')">Copy</button>
+          </div>
+          <p id="dis-inq">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD! Those who are long-term medically disabled are eligible to receive a 40% discount on full-price retail orders. To apply, please provide us with a document from a government agency such as an SSDI form that shows you are currently receiving disability benefits. We do not accept Medicaid for this program. This does require that you either have or create an account with us and place all your orders using this account.<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- Disability approved -->
+        <div>
+          <div class="internal-header">
+            <h3>Disability Approved</h3>
+            <button class="copy-text" onclick = "copyToClipboard('dis-approved')">Copy</button>
+          </div>
+          <p id="dis-approved">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD! We have reviewed the document you have provided and have approved your account for the disability discount. To ensure you receive the 40% discount on your purchases, you must be logged into your account when placing your order, and the order may only be shipped to the account holder's address.<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- Approved, but no account -->
+        <div>
+          <div class="internal-header">
+            <h3>Valid Document, No Account</h3>
+            <button class="copy-text" onclick = "copyToClipboard('app-noaccount')">Copy</button>
+          </div>
+          <p id="app-noaccount">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD! While that document is valid for the PERCENT% discount, I was unable to locate an account under this email address. If you have an account under a different email please let us know, otherwise please create an account under this email address and notify us once you have done so, and we'll be happy to apply that discount for you!<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+      </section>
+
+      <!-- Shipping section -->
+      <section class="_hidden" id="shipping-issues">
+        <!-- shipping issue template -->
+        <div>
+          <div class="internal-header">
+            <h3>Shipping Issue Template (internal comments)</h3>
+            <button class="copy-text" onclick = "copyToClipboard('wh-template')">Copy</button>
+          </div>
+          <p id="wh-template">
+            Address:<br>
+            ADDRESS<br><br>
+            <br>
+            Order:<br>
+            ITEM<br>
+            <br>
+            Order #<br>
+            Tracking #<br>
+            Order Date:<br>
+            Notification Date:<br>
+          </p>
+        </div>
+        <hr>
+        <!-- shipping/tracking -->
+        <div>
+          <div class="internal-header">
+            <h3>Tracking Information</h3>
+            <button class="copy-text" onclick = "copyToClipboard('tracking')">Copy</button>
+          </div>
+          <p id="tracking">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD! Your order has already shipped, and you can track your order at TRACKING<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- WH Issue Address Confirmation Only -->
+        <div>
+          <div class="internal-header">
+            <h3>WH Issue Address Confirmation Only</h3>
+            <button class="copy-text" onclick = "copyToClipboard('address-confirmation')">Copy</button>
+          </div>
+          <p id="address-confirmation">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD! We're sorry that this happened, and to help resolve this we would like to verify your address. Also, we would like to request an extra item for you from the billing department for the inconvenience. If you do not have a preference, it will simply be a duplicate of an item from the order.<br>
+            <br>
+            Is this your address?<br>
+            ADDRESS<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- WH Issue Address and Photo Confirmation -->
+        <div>
+          <div class="internal-header">
+            <h3>WH Issue Address and Photo Confirmation</h3>
+            <button class="copy-text" onclick = "copyToClipboard('pic-address-confirmation')">Copy</button>
+          </div>
+          <p id="pic-address-confirmation">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD! I apologize that this happened - to get you your product, can you send us a picture of what you received? Also, we would like to verify your address for reshipment, and we would like to request an extra item for you from the billing department for the inconvenience. If you do not have a preference, it will simply be a duplicate of an item from the order.<br>
+            <br>
+            Is this the correct address?<br>
+            ADDRESS<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- Not Delivered -->
+        <div>
+          <div class="internal-header">
+            <h3>Not Delivered</h3>
+            <button class="copy-text" onclick = "copyToClipboard('not-delivered')">Copy</button>
+          </div>
+          <p id="not-delivered">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD! Please check in any obscure locations, your mailbox, and with your neighbors. If you are still unable to locate your package, please let us know immediately so that we may assist you further and make sure you receive your product.<br>
+            <br>
+            In the event that we do need to ship a replacement, I would like to request to add an additional product for the inconvenience. If you have no preference, it will be a duplicate item from the order.<br>
+            <br>
+            I would also like to verify that this is your address:<br>
+            ADDRESS<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        
+
+      </section>
+
+      <!-- Warehouse Section -->
+      <section class="_hidden" id="warehouse-comm">
+        <!-- edit/cancellation requested -->
+        <div>
+          <div class="internal-header">
+            <h3>Request to WH Sent</h3>
+            <button class="copy-text" onclick = "copyToClipboard('request-placed')">
+            Copy</button>
+          </div>
+          <p id="request-placed">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD! I have gone ahead and requested that for you from our warehouse! We will reach back out to you as soon as we receive their response.<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- request successful -->
+        <div>
+          <div class="internal-header">
+            <h3>Request Approved/Completed</h3>
+            <button class="copy-text" onclick = "copyToClipboard('request-successful')">Copy</button>
+          </div>
+          <p id="request-successful">
+            Hello NAME<br>
+            <br>
+            Your request has been successfully fulfilled by our warehouse!<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- request unsuccesful -->
+        <div class="request-not-successful">
+          <div class="internal-header">
+            <h3>Request Failed (already shipped)</h3>
+            <button class="copy-text" onclick = "copyToClipboard('request-failed')">Copy</button>
+          </div>
+          <p id="request-failed">
+            Hello NAME<br>
+            <br>
+            Unfortunately, it appears that your order has already shipped, and our warehouse was unable to fulfill your request. I apologize for any inconvenience this may have caused.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+        <hr>
+        <!-- cancellation failed -->
+        <div class="cancellation-failed">
+          <div class="internal-header">
+            <h3>Cancellation Failed (already shipped)</h3>
+            <button class="copy-text" onclick = "copyToClipboard('cancellation-failed')">Copy</button>
+          </div>
+          <p id="cancellation-failed">
+            Hello NAME<br>
+            <br>
+            Unfortunately, it appears that your order has already shipped, and our warehouse was unable to cancel your order. I am reaching out to FedEx to have your package returned to us as soon as possible. If you end up receiving your package, please let us know immediately for next steps. In the meantime, no additional action is required.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Developed by Alexander Cooper</p>
+        <p>For use exclusively for the customer service department of cbdMD, located in Charlotte, NC</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

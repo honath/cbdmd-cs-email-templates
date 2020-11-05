@@ -1,0 +1,128 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+._hidden
+{
+  display: none;
+  
+}
+
+/* Primary containers */
+/* ------------------ */
+main
+{
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+footer
+{
+  justify-content: center;
+  background-color: #1F2F64;
+  height: auto;
+  width: 100%;
+  padding: 2rem 0;
+  margin: auto;
+  font-size: .5rem;
+  text-align: center;
+}
+/* ------------------ */
+
+section > div
+{
+  padding: 10px;
+}
+
+/* header */
+/* ------------------ */
+header
+{
+  justify-content: center;
+  background-color: #00B2E3;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#disclaimer
+{
+  color: #fff;
+}
+
+.categories
+{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  list-style: none;
+  padding: 1rem 0 0 0;
+  
+}
+
+.cat-btns
+{
+  width: fit-content;
+  margin: 0 1rem;
+  padding: 3px;
+  border: 3px solid #000;
+  border-style: none;
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 10%;
+  transition-duration: 0.1s;
+}
+
+.cat-btns:hover
+{
+  cursor: pointer;
+}
+
+.cat-btns:focus
+{
+  outline: none;
+}
+/* ------------------ */
+
+/* "Header" containers for each email template, with copy btn */
+/* ------------------ */
+.internal-header
+{
+  display: flex;
+  align-items: center;
+  margin: 3px 0;
+}
+
+.internal-header > h3
+{
+  width: fit-content;
+  margin: 0 auto 0 0;
+}
+
+.internal-header > button
+{
+  width: fit-content;
+  margin: 0;
+  padding: 3px;
+  border: 3px solid skyblue;
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 10%;
+  transition-duration: 0.1s;
+}
+
+.internal-header > button:hover
+{
+  background-color: skyblue;
+  color: white;
+  cursor: pointer;
+}
+/* ------------------ */
