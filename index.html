@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- ALexander Cooper -->
-<!-- 11/3/2020 -->
+<!-- Last updated 11/11/2020 -->
 <!-- This web page is intended to hold and organize email templates for use with cbdMD's Customer Support -->
 <html>
   <head>
@@ -16,12 +16,13 @@
     rel="stylesheet"
     type = "text/css">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="images/support-icon.png" rel="icon"/>
   </head>
   <body>
     <!-- Header -->
     <header>
       <div class="heading">
-        <h1>cbdMD CS Email Templates</h1>
+        <h1 id="top">cbdMD CS Email Templates</h1>
         <h2 id="disclaimer"><strong>PLEASE REMEMBER TO REVIEW THE EMAIL BEFORE SENDING, AND REPLACE ANY PLACEHOLDER TEXT</strong></h2>
       </div>
       <div> <!-- add more to list as sections are added -->
@@ -34,6 +35,15 @@
           </li>
           <li>
             <button class="cat-btns" onclick="changeSection('warehouse-comm')">WH Communication</button>
+          </li>
+          <li>
+            <button class="cat-btns" onclick="changeSection('product-issue')">Product Issue</button>
+          </li>
+          <li>
+            <button class="cat-btns" onclick="changeSection('billing')">Billing</button>
+          </li>
+          <li>
+            <button class="cat-btns" onclick="changeSection('gen-reply')">General/Misc</button>
           </li>
         </ul>
       </div>
@@ -168,7 +178,7 @@
           </div>
           <p id="wh-template">
             Address:<br>
-            ADDRESS<br><br>
+            ADDRESS<br>
             <br>
             Order:<br>
             ITEM<br>
@@ -210,7 +220,7 @@
             <br>
             Thank you for contacting cbdMD! We're sorry that this happened, and to help resolve this we would like to verify your address. Also, we would like to request an extra item for you from the billing department for the inconvenience. If you do not have a preference, it will simply be a duplicate of an item from the order.<br>
             <br>
-            Is this your address?<br>
+            Is this shipping address correct?<br>
             ADDRESS<br>
             <br>
             Please feel free to reach out to us with any further questions or concerns.<br>
@@ -232,7 +242,7 @@
             <br>
             Thank you for contacting cbdMD! I apologize that this happened - to get you your product, can you send us a picture of what you received? Also, we would like to verify your address for reshipment, and we would like to request an extra item for you from the billing department for the inconvenience. If you do not have a preference, it will simply be a duplicate of an item from the order.<br>
             <br>
-            Is this the correct address?<br>
+            Is this shipping address correct?<br>
             ADDRESS<br>
             <br>
             Please feel free to reach out to us with any further questions or concerns.<br>
@@ -266,8 +276,27 @@
             cbdMD Support<br>
           </p>
         </div>
-        
-
+        <hr>
+        <!-- fedex address manager -->
+        <div class="fedex">
+            <div class="internal-header">
+              <h3>FedEx Delivery Manager</h3>
+              <button class="copy-text" onclick = "copyToClipboard('fedex')">Copy</button>
+            </div>
+            <p id="fedex">
+              Hello NAME,<br>
+              <br>
+              Thank you for contacting cbdMD! Since your order has been shipped we are unable to update the address. You can visit www.FedEx.com and create a free FedEx Delivery Manager account and update your address there. You can also set up a pick up for the order as well at your nearest FedEx location. You can click the following link to create an account. www.fedex.com/en-us/create-account.html We hope this helps!<br>
+              <br>
+              If you'd like, we can also request that the order is returned to us prior to delivery, and have it sent to the appropriate address. If you would prefer this option, please let us know the shipping address you would like it to be sent to.<br>
+              <br>
+              Please let us know if you have any further questions or concerns.<br>
+              <br>
+              Thanks<br>
+              Alex<br>
+              cbdMD Support<br>
+            </p>
+        </div>
       </section>
 
       <!-- Warehouse Section -->
@@ -343,12 +372,223 @@
           </p>
         </div>
       </section>
+
+      <!-- Product Issue section -->
+      <section class="_hidden" id="product-issue">
+        <!-- product issue template for internal comments -->
+        <div class="p-issue-template">
+          <div class="internal-header">
+            <h3>Product Issue Template (internal comments)</h3>
+            <button class="copy-text" onclick = "copyToClipboard('p-issue-template')">Copy</button>
+          </div>
+          <p id="p-issue-template">
+            ISSUE<br>
+            <br>
+            Address:<br>
+            ADDRESS<br>
+            <br>
+            Product:<br>
+            ITEM<br>
+            <br>
+            SKU:<br>
+            sku<br>
+            <br>
+            Order #<br>
+            Date Issue Occurred:<br>
+            Order Date:<br>
+            Notification Date:<br>
+            <br>
+            Need batch # and manufactured/expiration date<br>
+          </p>
+        </div>
+        <hr>
+        <!-- product issue email -->
+        <div class="p-issue-email">
+          <div class="internal-header">
+            <h3>Product Issue Email (this MUST be edited to fit the current case)</h3>
+            <button class="copy-text" onclick = "copyToClipboard('p-issue-email')">Copy</button>
+          </div>
+          <p id="p-issue-email">
+            Hello NAME,<br>
+            <br>
+            Thank you for contacting cbdMD! We're sorry that you are having this issue, and to help resolve this we would like to verify a few things. If you can give us the lot/batch number, and either the expiration or manufacturing date, we would appreciate it.<br>
+            <br>
+            Please hold onto the product in case our escalations department would like you to return it to us for further investigation.<br>
+            <br>
+            To send a replacement, we would like to verify your address.<br>
+            <br>
+            Is this your address?<br>
+            ADDRESS<br>
+            <br>
+            Please feel free to reach out to us with any further questions or concerns.<br>
+            <br>
+            Thanks<br>
+            YOURNAME<br>
+            cbdMD Support<br>
+          </p>
+        </div>
+      </section>
+
+      <!-- Billing section -->
+      <section class="_hidden" id="billing">
+        <div class="escalated-to-billing">
+            <div class="internal-header">
+              <h3>Request Sent to Billing</h3>
+              <button class="copy-text" onclick = "copyToClipboard('escalated-to-billing')">Copy</button>
+            </div>
+            <p id="escalated-to-billing">
+              Hello NAME,<br>
+              <br>
+              Thank you for contacting cbdMD! I have gone ahead and requested that for you from our billing department. Please keep an eye on your email for their follow-up.<br>
+              <br>
+              Please feel free to reach out to us with any further questions or concerns.<br>
+              <br>
+              Thanks<br>
+              YOURNAME<br>
+              cbdMD Support<br>
+            </p>
+        </div>
+        <hr>
+        <!-- refund requested -->
+        <div class="refund-request">
+            <div class="internal-header">
+              <h3>Requesting a Refund (offer exchange)</h3>
+              <button class="copy-text" onclick = "copyToClipboard('refund-request')">Copy</button>
+            </div>
+            <p id="refund-request">
+              Hello NAME,<br>
+              <br>
+              Thank you for contacting cbdMD! I'm sorry you're unhappy with your product. We would be happy to process a refund, however we would like to offer the possibility of an exchange for a different product of similar or equal value to your PRODUCT. If you would still prefer to proceed with a refund, I will go ahead and escalate this to our billing and escalations department for you.<br>
+              <br>
+              Please feel free to reach out to us with any further questions or concerns.<br>
+              <br>
+              Thanks<br>
+              YOURNAME<br>
+              cbdMD Support<br>
+            </p>
+        </div>
+        <hr>
+        <!-- exchange request -->
+        <div class="exchange-request">
+            <div class="internal-header">
+              <h3>Requesting an Exchange</h3>
+              <button class="copy-text" onclick = "copyToClipboard('exchange-request')">Copy</button>
+            </div>
+            <p id="exchange-request">
+              Hello NAME,<br>
+              <br>
+              Thank you for contacting cbdMD! I would be happy to request that exchange for you! We would just like to confirm your shipping address, and double check the products you would like to receive. Is the below information correct?<br>
+              <br>
+              Shipping Address:<br>
+              ADDRESS<br>
+              <br>
+              Product:<br>
+              PRODUCT<br>
+              <br>
+              Please feel free to reach out to us with any further questions or concerns.<br>
+              <br>
+              Thanks<br>
+              YOURNAME<br>
+              cbdMD Support<br>
+            </p>
+        </div>
+      </section>
+
+      <!-- General/misc responses section -->
+      <section class="_hidden" id="gen-reply">
+        <!-- info provided for p issue/wh issue -->
+        <div class="gave-info">
+            <div class="internal-header">
+              <h3>Info Received, Escalated to Billing</h3>
+              <button class="copy-text" onclick = "copyToClipboard('gave-info')">Copy</button>
+            </div>
+            <p id="gave-info">
+              Hello NAME,<br>
+              <br>
+              Thank you for providing that information! I've gone ahead and escalated this to our billing department for a ACTION. Our billing department will reach out to you soon with further information.<br>
+              <br>
+              Please feel free to reach out to us with any further questions or concerns.<br>
+              <br>
+              Thanks<br>
+              YOURNAME<br>
+              cbdMD Support<br>
+            </p>
+        </div>
+        <hr>
+        <!-- THC test pass? -->
+        <div class="thc-test">
+            <div class="internal-header">
+              <h3>Will I Pass a THC Test?</h3>
+              <button class="copy-text" onclick = "copyToClipboard('thc-test')">Copy</button>
+            </div>
+            <p id="thc-test">
+              Hello NAME,<br>
+              <br>
+              Thank you for contacting cbdMD! Our 3rd party lab results show no detectable amounts of THC, but there's a chance of trace amounts being present. It's important to look into the specific test and acceptable thresholds. We have several athletes and professionals who use our products and are tested daily. Nobody has ever tested positive for THC using our products alone.<br>
+              <br>
+              Unfortunately I am unable to answer explicitly yes or no, you will need to look into the type of test you are taking. Also, our products have no traces of THC, with THC-free defined as undetectable at the lowest level which is tested using labs.<br>
+              <br>
+              Please feel free to reach out to us with any further questions or concerns.<br>
+              <br>
+              Thanks<br>
+              YOURNAME<br>
+              cbdMD Support<br>
+            </p>
+        </div>
+        <hr>
+        <!-- wholesale inquiry -->
+        <div class="wholesale">
+            <div class="internal-header">
+              <h3>Wholesale Inquiry</h3>
+              <button class="copy-text" onclick = "copyToClipboard('wholesale')">Copy</button>
+            </div> 
+            <p id="wholesale">
+              Hello NAME,<br>
+              <br>
+              Thank you for contacting cbdMD! If you are interested in wholesale, you can contact our sales department either at 1-800-910-1925 or wholesale@cbdmd.com<br>
+              <br>
+              You can also sign up for wholesale directly on our website here: https://www.cbdmd.com/bulk-wholesale-cbd<br>
+              <br>
+              Please feel free to reach out to us with any further questions or concerns.<br>
+              <br>
+              Thanks<br>
+              YOURNAME<br>
+              cbdMD Support<br>
+            </p> 
+        </div> 
+        <hr>
+        <!-- Sponsorship Inquiry -->
+        <div class="sponsorship">
+            <div class="internal-header">
+              <h3>Sponsorship Inquiry</h3>
+              <button class="copy-text" onclick = "copyToClipboard('sponsorship')">Copy</button>
+            </div> 
+            <p id="sponsorship">
+              Hello NAME,<br>
+              <br>
+              Thank you for contacting cbdMD! I have gone ahead and forwarded your information to my supervisor for a sponsorship, and if she is interested she will reach out to you. In the meantime, you can also apply for affiliate status here: https://www.cbdmd.com/affiliate-program<br>
+              <br>
+              Please feel free to reach out to us with any further questions or concerns.<br>
+              <br>
+              Thanks<br>
+              YOURNAME<br>
+              cbdMD Support<br>
+            </p>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>Developed by Alexander Cooper</p>
+      <div>
+        <a href="#top" class="back-to-top">Back to top</a>
+      </div>
+      <div>
+        <p>Developed by <a class="git-link" href="https://github.com/honath" target="_blank">Alexander Cooper.</a></p>
+      </div>
+      <div>
         <p>For use exclusively for the customer service department of cbdMD, located in Charlotte, NC</p>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>

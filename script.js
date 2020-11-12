@@ -16,16 +16,13 @@ function copyToClipboard(copyID)
   el.select();
   document.execCommand("copy");
   document.body.removeChild(el);
-
-  //notify user
-  //alert("Copied!");
 }
 
 //show desired category/section, hide the rest
 function changeSection(tarID)
 {
   //array of category section IDs, add more as needed
-  var categories = ["vet-med", "shipping-issues", "warehouse-comm"]; 
+  var categories = ["vet-med", "shipping-issues", "warehouse-comm", "product-issue", "billing", "gen-reply"]; 
   //declare "element selector" and hide welcome section
   var currentEl = document.getElementById("welcome");
   currentEl.style.display = "none";

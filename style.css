@@ -9,39 +9,16 @@
 ._hidden
 {
   display: none;
-  
+}
+
+hr
+{
+  background-color: rgb(150, 150, 150);
+  border-color: rgb(150, 150, 150);
+  border-radius: 50%;
 }
 
 /* Primary containers */
-/* ------------------ */
-main
-{
-  justify-content: center;
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
-  padding: 1rem 0;
-}
-
-footer
-{
-  justify-content: center;
-  background-color: #1F2F64;
-  height: auto;
-  width: 100%;
-  padding: 2rem 0;
-  margin: auto;
-  font-size: .5rem;
-  text-align: center;
-}
-/* ------------------ */
-
-section > div
-{
-  padding: 10px;
-}
-
-/* header */
 /* ------------------ */
 header
 {
@@ -53,6 +30,40 @@ header
   padding: 2rem 0;
 }
 
+main
+{
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  min-height: 50;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background-color: #fff;
+}
+
+footer
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F2F64;
+  color: rgb(212, 212, 212);
+  height: 7rem;
+  width: 100%;
+  padding: 2rem, auto;
+  margin: 3rem, auto;
+  font-size: .5rem;
+}
+/* ------------------ */
+
+section > div
+{
+  padding: 10px;
+}
+
+/* header */
+/* ------------------ */
 #disclaimer
 {
   color: #fff;
@@ -92,7 +103,7 @@ header
 }
 /* ------------------ */
 
-/* "Header" containers for each email template, with copy btn */
+/* "Header" containers for each email template, with copy btn inside main */
 /* ------------------ */
 .internal-header
 {
@@ -112,11 +123,11 @@ header
   width: fit-content;
   margin: 0;
   padding: 3px;
-  border: 3px solid skyblue;
+  border: 3px solid rgb(137, 207, 235);
   background-color: transparent;
   text-decoration: none;
   border-radius: 10%;
-  transition-duration: 0.1s;
+  transition-duration: 0.15s;
 }
 
 .internal-header > button:hover
@@ -124,5 +135,38 @@ header
   background-color: skyblue;
   color: white;
   cursor: pointer;
+}
+/* ------------------ */
+
+/* footer */
+/* ------------------ */
+.back-to-top:link {color: rgb(255, 255, 255)}
+.back-to-top:visited {color: rgb(255, 255, 255)}
+.back-to-top:hover {color: rgb(241, 241, 241)}
+.back-to-top:active {color: rgb(223, 223, 223)}
+
+.back-to-top
+{
+  font-size: .75rem;
+  padding: .5rem, 0;
+  margin: .5rem;
+}
+
+.git-link:link {color: rgb(212, 212, 212)}
+.git-link:visited {color: rgb(212, 212, 212)}
+.git-link:hover {color: rgb(255, 255, 255)}
+.git-link:active {color: rgb(223, 223, 223)}
+
+.git-link
+{
+  text-decoration: none;
+}
+
+footer > div
+{
+  padding: 2rem, auto; 
+  margin: 2rem, 1rem;
+  justify-content: center;
+  display: flex;
 }
 /* ------------------ */
