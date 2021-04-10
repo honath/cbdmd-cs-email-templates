@@ -4,166 +4,244 @@
 <!-- This web page is intended to hold and organize email templates for use with cbdMD's Customer Support -->
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>cbdMD CS Email Templates</title>
-    <link 
+    <link
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      rel="stylesheet" 
-      type="text/css" 
+      rel="stylesheet"
+      type="text/css"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" 
-    rel="stylesheet"
-    type = "text/css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="images/support-icon.png" rel="icon"/>
+    <link href="images/support-icon.png" rel="icon" />
   </head>
   <body>
     <!-- Header -->
     <header>
-      <div class="heading">
-        <h1 id="top">cbdMD CS Email Templates</h1>
-        <h2 id="disclaimer"><strong>PLEASE REMEMBER TO REVIEW THE EMAIL BEFORE SENDING, AND REPLACE ANY PLACEHOLDER TEXT</strong></h2>
-      </div>
-      <div> <!-- add more to list as sections are added -->
+      <nav>
+        <!-- add more to list as sections are added -->
         <ul class="categories">
           <li>
-            <button class="cat-btns" onclick="changeSection('vet-med')">Veteran/Medical</button>
+            <button class="cat-btns" onclick="changeSection('vet-med')">
+              Vet/Med
+            </button>
           </li>
           <li>
-            <button class="cat-btns" onclick="changeSection('shipping-issues')">Shipping</button>
+            <button class="cat-btns" onclick="changeSection('shipping-issues')">
+              Ship
+            </button>
           </li>
           <li>
-            <button class="cat-btns" onclick="changeSection('warehouse-comm')">WH Communication</button>
+            <button class="cat-btns" onclick="changeSection('warehouse-comm')">
+              Warehouse
+            </button>
           </li>
           <li>
-            <button class="cat-btns" onclick="changeSection('product-issue')">Product Issue</button>
+            <button class="cat-btns" onclick="changeSection('product-issue')">
+              Product Issue
+            </button>
           </li>
           <li>
-            <button class="cat-btns" onclick="changeSection('billing')">Billing</button>
+            <button class="cat-btns" onclick="changeSection('billing')">
+              Billing
+            </button>
           </li>
           <li>
-            <button class="cat-btns" onclick="changeSection('gen-reply')">General/Misc</button>
+            <button class="cat-btns" onclick="changeSection('gen-reply')">
+              General
+            </button>
           </li>
         </ul>
+      </nav>
+      <div class="heading">
+        <span id="disclaimer">
+          <h2>PLEASE</h2>
+          <p>
+            REMEMBER TO REVIEW THE EMAIL BEFORE SENDING, AND REPLACE ANY
+            PLACEHOLDER TEXT
+          </p>
+        </span>
       </div>
     </header>
-
+    <!-- Separator div -->
+    <div id="separator"></div>
     <!-- Template displays -->
     <main>
       <!-- Welcome -->
       <section id="welcome">
         <p>
-          Welcome!<br>
-          <br>
-          If this is your first time using this page, <strong>please read the following before use:</strong><br>
-          <br>
-          This website serves as a compendium of emails that you, the customer service represenative, can use to communicate with customers quickly and efficiently.<br>
-          <strong>Please</strong> remember that these serve as <u>base templates</u> for your emails, and will require some editing and personalization, such as your own signature.<br>
-          As a general rule, most of these will have "NAME" in place of the relevant customer's name, and "YOURNAME" in place of where your name should be, but some will have additional fields for you to replace, so keep an eye out for them. The most common will be "ADDRESS", for the customer's shipping address.<br>
-          <br>
-          Double clicking the placeholder text that is in all caps will select that text, making it quick and easy to replace it! Easy, right?<br>
-          <br>
-          Good, don't mess it up. Crystal will yell at you, and the customer will be angry.<br>
-          <br>
-          <br>
-          Once you have read this, feel free to click any of the categories at the top to see the available templates. This disclaimer will disappear.<br>
+          Welcome!<br />
+          <br />
+          If this is your first time using this page,
+          <strong>please read the following before use:</strong><br />
+          <br />
+          This website serves as a compendium of emails that you, the customer
+          service represenative, can use to communicate with customers quickly
+          and efficiently.<br />
+          <strong>Please</strong> remember that these serve as
+          <u>base templates</u> for your emails, and will require some editing
+          and personalization, such as your own signature.<br />
+          As a general rule, most of these will have "NAME" in place of the
+          relevant customer's name, and "YOURNAME" in place of where your name
+          should be, but some will have additional fields for you to replace, so
+          keep an eye out for them. The most common will be "ADDRESS", for the
+          customer's shipping address.<br />
+          <br />
+          Double clicking the placeholder text that is in all caps will select
+          that text, making it quick and easy to replace it! Easy, right?<br />
+          <br />
+          Good, don't mess it up. Crystal will yell at you, and the customer
+          will be angry.<br />
+          <br />
+          <br />
+          Once you have read this, feel free to click any of the categories at
+          the top to see the available templates. This disclaimer will
+          disappear.<br />
         </p>
       </section>
       <!-- Vet/med section -->
       <section class="_hidden" id="vet-med">
         <!-- Military Inquiry -->
-        <div>
+        <div class="bg-dark">
           <div class="internal-header">
             <h3>Military Inquiry</h3>
-            <button class="copy-text" onclick = "copyToClipboard('mil-inq')">Copy</button>
+            <button class="copy-text" onclick="copyToClipboard('mil-inq')">
+              Copy
+            </button>
           </div>
           <p id="mil-inq">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD and for your service! To qualify for the 30% veteran discount, please ensure you have an account and then send us a copy of your DD-214, a military ID, or any other documentation deeming you a veteran or active duty service member. Once we receive that, we will update your account to reflect the discount. The account name and name on the military documentation must match.<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD and for your service! To qualify for
+            the 30% veteran discount, please ensure you have an account and then
+            send us a copy of your DD-214, a military ID, or any other
+            documentation deeming you a veteran or active duty service member.
+            Once we receive that, we will update your account to reflect the
+            discount. The account name and name on the military documentation
+            must match.<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- Military approved -->
         <div>
           <div class="internal-header">
             <h3>Military Approved</h3>
-            <button class="copy-text" onclick = "copyToClipboard('mil-approved')">Copy</button>
+            <button class="copy-text" onclick="copyToClipboard('mil-approved')">
+              Copy
+            </button>
           </div>
           <p id="mil-approved">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD and for your service! We have reviewed the document you have provided and have approved your account for the veteran discount. To ensure you receive the 30% discount on your purchases, you must be logged into your account when placing your order, and the order may only be shipped to the account holder's address.<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD and for your service! We have
+            reviewed the document you have provided and have approved your
+            account for the veteran discount. To ensure you receive the 30%
+            discount on your purchases, you must be logged into your account
+            when placing your order, and the order may only be shipped to the
+            account holder's address.<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- Disability inquiry -->
-        <div>
+        <div class="bg-dark">
           <div class="internal-header">
             <h3>Disability Inquiry</h3>
-            <button class="copy-text" onclick = "copyToClipboard('dis-inq')">Copy</button>
+            <button class="copy-text" onclick="copyToClipboard('dis-inq')">
+              Copy
+            </button>
           </div>
           <p id="dis-inq">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD! Those who are long-term medically disabled are eligible to receive a 40% discount on full-price retail orders. To apply, please provide us with a document from a government agency such as an SSDI form that shows you are currently receiving disability benefits. We do not accept Medicaid for this program. This does require that you either have or create an account with us and place all your orders using this account.<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! Those who are long-term medically
+            disabled are eligible to receive a 40% discount on full-price retail
+            orders. To apply, please provide us with a document from a
+            government agency such as an SSDI form that shows you are currently
+            receiving disability benefits. We do not accept Medicaid for this
+            program. This does require that you either have or create an account
+            with us and place all your orders using this account.<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- Disability approved -->
         <div>
           <div class="internal-header">
             <h3>Disability Approved</h3>
-            <button class="copy-text" onclick = "copyToClipboard('dis-approved')">Copy</button>
+            <button class="copy-text" onclick="copyToClipboard('dis-approved')">
+              Copy
+            </button>
           </div>
           <p id="dis-approved">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD! We have reviewed the document you have provided and have approved your account for the disability discount. To ensure you receive the 40% discount on your purchases, you must be logged into your account when placing your order, and the order may only be shipped to the account holder's address.<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! We have reviewed the document you
+            have provided and have approved your account for the disability
+            discount. To ensure you receive the 40% discount on your purchases,
+            you must be logged into your account when placing your order, and
+            the order may only be shipped to the account holder's address.<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- Approved, but no account -->
-        <div>
+        <div class="bg-dark">
           <div class="internal-header">
             <h3>Valid Document, No Account</h3>
-            <button class="copy-text" onclick = "copyToClipboard('app-noaccount')">Copy</button>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('app-noaccount')"
+            >
+              Copy
+            </button>
           </div>
           <p id="app-noaccount">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD! While that document is valid for the PERCENT% discount, I was unable to locate an account under this email address. If you have an account under a different email please let us know, otherwise please create an account under this email address and notify us once you have done so, and we'll be happy to apply that discount for you!<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! While that document is valid for the
+            PERCENT% discount, I was unable to locate an account under this
+            email address. If you have an account under a different email please
+            let us know, otherwise please create an account under this email
+            address and notify us once you have done so, and we'll be happy to
+            apply that discount for you!<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
       </section>
@@ -171,204 +249,283 @@
       <!-- Shipping section -->
       <section class="_hidden" id="shipping-issues">
         <!-- shipping issue template -->
-        <div>
+        <div class="bg-dark">
           <div class="internal-header">
             <h3>Shipping Issue Template (internal comments)</h3>
-            <button class="copy-text" onclick = "copyToClipboard('wh-template')">Copy</button>
+            <button class="copy-text" onclick="copyToClipboard('wh-template')">
+              Copy
+            </button>
           </div>
           <p id="wh-template">
-            Address:<br>
-            ADDRESS<br>
-            <br>
-            Order:<br>
-            ITEM<br>
-            <br>
-            Order #<br>
-            Tracking #<br>
-            Order Date:<br>
-            Notification Date:<br>
+            Address:<br />
+            ADDRESS<br />
+            <br />
+            Order:<br />
+            ITEM<br />
+            <br />
+            Order #<br />
+            Tracking #<br />
+            Order Date:<br />
+            Notification Date:<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- shipping/tracking -->
         <div>
           <div class="internal-header">
             <h3>Tracking Information</h3>
-            <button class="copy-text" onclick = "copyToClipboard('tracking')">Copy</button>
+            <button class="copy-text" onclick="copyToClipboard('tracking')">
+              Copy
+            </button>
           </div>
           <p id="tracking">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD! Your order has already shipped, and you can track your order at TRACKING<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! Your order has already shipped, and
+            you can track your order at TRACKING<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- WH Issue Address Confirmation Only -->
-        <div>
+        <div class="bg-dark">
           <div class="internal-header">
             <h3>WH Issue Address Confirmation Only</h3>
-            <button class="copy-text" onclick = "copyToClipboard('address-confirmation')">Copy</button>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('address-confirmation')"
+            >
+              Copy
+            </button>
           </div>
           <p id="address-confirmation">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD! We're sorry that this happened, and to help resolve this we would like to verify your address. Also, we would like to request an extra item for you from the billing department for the inconvenience. If you do not have a preference, it will simply be a duplicate of an item from the order.<br>
-            <br>
-            Is this shipping address correct?<br>
-            ADDRESS<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! We're sorry that this happened, and
+            to help resolve this we would like to verify your address. Also, we
+            would like to request an extra item for you from the billing
+            department for the inconvenience. If you do not have a preference,
+            it will simply be a duplicate of an item from the order.<br />
+            <br />
+            Is this shipping address correct?<br />
+            ADDRESS<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- WH Issue Address and Photo Confirmation -->
         <div>
           <div class="internal-header">
             <h3>WH Issue Address and Photo Confirmation</h3>
-            <button class="copy-text" onclick = "copyToClipboard('pic-address-confirmation')">Copy</button>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('pic-address-confirmation')"
+            >
+              Copy
+            </button>
           </div>
           <p id="pic-address-confirmation">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD! I apologize that this happened - to get you your product, can you send us a picture of what you received? Also, we would like to verify your address for reshipment, and we would like to request an extra item for you from the billing department for the inconvenience. If you do not have a preference, it will simply be a duplicate of an item from the order.<br>
-            <br>
-            Is this shipping address correct?<br>
-            ADDRESS<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! I apologize that this happened - to
+            get you your product, can you send us a picture of what you
+            received? Also, we would like to verify your address for reshipment,
+            and we would like to request an extra item for you from the billing
+            department for the inconvenience. If you do not have a preference,
+            it will simply be a duplicate of an item from the order.<br />
+            <br />
+            Is this shipping address correct?<br />
+            ADDRESS<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- Not Delivered -->
-        <div>
+        <div class="bg-dark">
           <div class="internal-header">
             <h3>Not Delivered</h3>
-            <button class="copy-text" onclick = "copyToClipboard('not-delivered')">Copy</button>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('not-delivered')"
+            >
+              Copy
+            </button>
           </div>
           <p id="not-delivered">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD! Please check in any obscure locations, your mailbox, and with your neighbors. If you are still unable to locate your package, please let us know immediately so that we may assist you further and make sure you receive your product.<br>
-            <br>
-            In the event that we do need to ship a replacement, I would like to request to add an additional product for the inconvenience. If you have no preference, it will be a duplicate item from the order.<br>
-            <br>
-            I would also like to verify that this is your address:<br>
-            ADDRESS<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! Please check in any obscure
+            locations, your mailbox, and with your neighbors. If you are still
+            unable to locate your package, please let us know immediately so
+            that we may assist you further and make sure you receive your
+            product.<br />
+            <br />
+            In the event that we do need to ship a replacement, I would like to
+            request to add an additional product for the inconvenience. If you
+            have no preference, it will be a duplicate item from the order.<br />
+            <br />
+            I would also like to verify that this is your address:<br />
+            ADDRESS<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- fedex address manager -->
         <div class="fedex">
-            <div class="internal-header">
-              <h3>FedEx Delivery Manager</h3>
-              <button class="copy-text" onclick = "copyToClipboard('fedex')">Copy</button>
-            </div>
-            <p id="fedex">
-              Hello NAME,<br>
-              <br>
-              Thank you for contacting cbdMD! Since your order has been shipped we are unable to update the address. You can visit www.FedEx.com and create a free FedEx Delivery Manager account and update your address there. You can also set up a pick up for the order as well at your nearest FedEx location. You can click the following link to create an account. www.fedex.com/en-us/create-account.html We hope this helps!<br>
-              <br>
-              If you'd like, we can also request that the order is returned to us prior to delivery, and have it sent to the appropriate address. If you would prefer this option, please let us know the shipping address you would like it to be sent to.<br>
-              <br>
-              Please let us know if you have any further questions or concerns.<br>
-              <br>
-              Thanks<br>
-              Alex<br>
-              cbdMD Support<br>
-            </p>
+          <div class="internal-header">
+            <h3>FedEx Delivery Manager</h3>
+            <button class="copy-text" onclick="copyToClipboard('fedex')">
+              Copy
+            </button>
+          </div>
+          <p id="fedex">
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! Since your order has been shipped we
+            are unable to update the address. You can visit www.FedEx.com and
+            create a free FedEx Delivery Manager account and update your address
+            there. You can also set up a pick up for the order as well at your
+            nearest FedEx location. You can click the following link to create
+            an account. www.fedex.com/en-us/create-account.html We hope this
+            helps!<br />
+            <br />
+            If you'd like, we can also request that the order is returned to us
+            prior to delivery, and have it sent to the appropriate address. If
+            you would prefer this option, please let us know the shipping
+            address you would like it to be sent to.<br />
+            <br />
+            Please let us know if you have any further questions or concerns.<br />
+            <br />
+            Thanks<br />
+            Alex<br />
+            cbdMD Support<br />
+          </p>
         </div>
       </section>
 
       <!-- Warehouse Section -->
       <section class="_hidden" id="warehouse-comm">
         <!-- edit/cancellation requested -->
-        <div>
+        <div class="bg-dark">
           <div class="internal-header">
             <h3>Request to WH Sent</h3>
-            <button class="copy-text" onclick = "copyToClipboard('request-placed')">
-            Copy</button>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('request-placed')"
+            >
+              Copy
+            </button>
           </div>
           <p id="request-placed">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD! I have gone ahead and requested that for you from our warehouse! We will reach back out to you as soon as we receive their response.<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! I have gone ahead and requested that
+            for you from our warehouse! We will reach back out to you as soon as
+            we receive their response.<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- request successful -->
         <div>
           <div class="internal-header">
             <h3>Request Approved/Completed</h3>
-            <button class="copy-text" onclick = "copyToClipboard('request-successful')">Copy</button>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('request-successful')"
+            >
+              Copy
+            </button>
           </div>
           <p id="request-successful">
-            Hello NAME<br>
-            <br>
-            Your request has been successfully fulfilled by our warehouse!<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME<br />
+            <br />
+            Your request has been successfully fulfilled by our warehouse!<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- request unsuccesful -->
-        <div class="request-not-successful">
+        <div class="request-not-successful bg-dark">
           <div class="internal-header">
             <h3>Request Failed (already shipped)</h3>
-            <button class="copy-text" onclick = "copyToClipboard('request-failed')">Copy</button>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('request-failed')"
+            >
+              Copy
+            </button>
           </div>
           <p id="request-failed">
-            Hello NAME<br>
-            <br>
-            Unfortunately, it appears that your order has already shipped, and our warehouse was unable to fulfill your request. I apologize for any inconvenience this may have caused.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME<br />
+            <br />
+            Unfortunately, it appears that your order has already shipped, and
+            our warehouse was unable to fulfill your request. I apologize for
+            any inconvenience this may have caused.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- cancellation failed -->
         <div class="cancellation-failed">
           <div class="internal-header">
             <h3>Cancellation Failed (already shipped)</h3>
-            <button class="copy-text" onclick = "copyToClipboard('cancellation-failed')">Copy</button>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('cancellation-failed')"
+            >
+              Copy
+            </button>
           </div>
           <p id="cancellation-failed">
-            Hello NAME<br>
-            <br>
-            Unfortunately, it appears that your order has already shipped, and our warehouse was unable to cancel your order. I am reaching out to FedEx to have your package returned to us as soon as possible. If you end up receiving your package, please let us know immediately for next steps. In the meantime, no additional action is required.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME<br />
+            <br />
+            Unfortunately, it appears that your order has already shipped, and
+            our warehouse was unable to cancel your order. I am reaching out to
+            FedEx to have your package returned to us as soon as possible. If
+            you end up receiving your package, please let us know immediately
+            for next steps. In the meantime, no additional action is
+            required.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
       </section>
@@ -376,204 +533,278 @@
       <!-- Product Issue section -->
       <section class="_hidden" id="product-issue">
         <!-- product issue template for internal comments -->
-        <div class="p-issue-template">
+        <div class="p-issue-template bg-dark">
           <div class="internal-header">
             <h3>Product Issue Template (internal comments)</h3>
-            <button class="copy-text" onclick = "copyToClipboard('p-issue-template')">Copy</button>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('p-issue-template')"
+            >
+              Copy
+            </button>
           </div>
           <p id="p-issue-template">
-            ISSUE<br>
-            <br>
-            Address:<br>
-            ADDRESS<br>
-            <br>
-            Product:<br>
-            ITEM<br>
-            <br>
-            SKU:<br>
-            sku<br>
-            <br>
-            Order #<br>
-            Date Issue Occurred:<br>
-            Order Date:<br>
-            Notification Date:<br>
-            <br>
-            Need batch # and manufactured/expiration date<br>
+            ISSUE<br />
+            <br />
+            Address:<br />
+            ADDRESS<br />
+            <br />
+            Product:<br />
+            ITEM<br />
+            <br />
+            SKU:<br />
+            sku<br />
+            <br />
+            Order #<br />
+            Date Issue Occurred:<br />
+            Order Date:<br />
+            Notification Date:<br />
+            <br />
+            Need batch # and manufactured/expiration date<br />
           </p>
         </div>
-        <hr>
+        <hr />
         <!-- product issue email -->
         <div class="p-issue-email">
           <div class="internal-header">
-            <h3>Product Issue Email (this MUST be edited to fit the current case)</h3>
-            <button class="copy-text" onclick = "copyToClipboard('p-issue-email')">Copy</button>
+            <h3>
+              Product Issue Email (this MUST be edited to fit the current case)
+            </h3>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('p-issue-email')"
+            >
+              Copy
+            </button>
           </div>
           <p id="p-issue-email">
-            Hello NAME,<br>
-            <br>
-            Thank you for contacting cbdMD! We're sorry that you are having this issue, and to help resolve this we would like to verify a few things. If you can give us the lot/batch number, and either the expiration or manufacturing date, we would appreciate it.<br>
-            <br>
-            Please hold onto the product in case our escalations department would like you to return it to us for further investigation.<br>
-            <br>
-            To send a replacement, we would like to verify your address.<br>
-            <br>
-            Is this your address?<br>
-            ADDRESS<br>
-            <br>
-            Please feel free to reach out to us with any further questions or concerns.<br>
-            <br>
-            Thanks<br>
-            YOURNAME<br>
-            cbdMD Support<br>
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! We're sorry that you are having this
+            issue, and to help resolve this we would like to verify a few
+            things. If you can give us the lot/batch number, and either the
+            expiration or manufacturing date, we would appreciate it.<br />
+            <br />
+            Please hold onto the product in case our escalations department
+            would like you to return it to us for further investigation.<br />
+            <br />
+            To send a replacement, we would like to verify your address.<br />
+            <br />
+            Is this your address?<br />
+            ADDRESS<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
           </p>
         </div>
       </section>
 
       <!-- Billing section -->
       <section class="_hidden" id="billing">
-        <div class="escalated-to-billing">
-            <div class="internal-header">
-              <h3>Request Sent to Billing</h3>
-              <button class="copy-text" onclick = "copyToClipboard('escalated-to-billing')">Copy</button>
-            </div>
-            <p id="escalated-to-billing">
-              Hello NAME,<br>
-              <br>
-              Thank you for contacting cbdMD! I have gone ahead and requested that for you from our billing department. Please keep an eye on your email for their follow-up.<br>
-              <br>
-              Please feel free to reach out to us with any further questions or concerns.<br>
-              <br>
-              Thanks<br>
-              YOURNAME<br>
-              cbdMD Support<br>
-            </p>
+        <div class="escalated-to-billing bg-dark">
+          <div class="internal-header">
+            <h3>Request Sent to Billing</h3>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('escalated-to-billing')"
+            >
+              Copy
+            </button>
+          </div>
+          <p id="escalated-to-billing">
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! I have gone ahead and requested that
+            for you from our billing department. Please keep an eye on your
+            email for their follow-up.<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
+          </p>
         </div>
-        <hr>
+        <hr />
         <!-- refund requested -->
         <div class="refund-request">
-            <div class="internal-header">
-              <h3>Requesting a Refund (offer exchange)</h3>
-              <button class="copy-text" onclick = "copyToClipboard('refund-request')">Copy</button>
-            </div>
-            <p id="refund-request">
-              Hello NAME,<br>
-              <br>
-              Thank you for contacting cbdMD! I'm sorry you're unhappy with your product. We would be happy to process a refund, however we would like to offer the possibility of an exchange for a different product of similar or equal value to your PRODUCT. If you would still prefer to proceed with a refund, I will go ahead and escalate this to our billing and escalations department for you.<br>
-              <br>
-              Please feel free to reach out to us with any further questions or concerns.<br>
-              <br>
-              Thanks<br>
-              YOURNAME<br>
-              cbdMD Support<br>
-            </p>
+          <div class="internal-header">
+            <h3>Requesting a Refund (offer exchange)</h3>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('refund-request')"
+            >
+              Copy
+            </button>
+          </div>
+          <p id="refund-request">
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! I'm sorry you're unhappy with your
+            product. We would be happy to process a refund, however we would
+            like to offer the possibility of an exchange for a different product
+            of similar or equal value to your PRODUCT. If you would still prefer
+            to proceed with a refund, I will go ahead and escalate this to our
+            billing and escalations department for you.<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
+          </p>
         </div>
-        <hr>
+        <hr />
         <!-- exchange request -->
-        <div class="exchange-request">
-            <div class="internal-header">
-              <h3>Requesting an Exchange</h3>
-              <button class="copy-text" onclick = "copyToClipboard('exchange-request')">Copy</button>
-            </div>
-            <p id="exchange-request">
-              Hello NAME,<br>
-              <br>
-              Thank you for contacting cbdMD! I would be happy to request that exchange for you! We would just like to confirm your shipping address, and double check the products you would like to receive. Is the below information correct?<br>
-              <br>
-              Shipping Address:<br>
-              ADDRESS<br>
-              <br>
-              Product:<br>
-              PRODUCT<br>
-              <br>
-              Please feel free to reach out to us with any further questions or concerns.<br>
-              <br>
-              Thanks<br>
-              YOURNAME<br>
-              cbdMD Support<br>
-            </p>
+        <div class="exchange-request bg-dark">
+          <div class="internal-header">
+            <h3>Requesting an Exchange</h3>
+            <button
+              class="copy-text"
+              onclick="copyToClipboard('exchange-request')"
+            >
+              Copy
+            </button>
+          </div>
+          <p id="exchange-request">
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! I would be happy to request that
+            exchange for you! We would just like to confirm your shipping
+            address, and double check the products you would like to receive. Is
+            the below information correct?<br />
+            <br />
+            Shipping Address:<br />
+            ADDRESS<br />
+            <br />
+            Product:<br />
+            PRODUCT<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
+          </p>
         </div>
       </section>
 
       <!-- General/misc responses section -->
       <section class="_hidden" id="gen-reply">
         <!-- info provided for p issue/wh issue -->
-        <div class="gave-info">
-            <div class="internal-header">
-              <h3>Info Received, Escalated to Billing</h3>
-              <button class="copy-text" onclick = "copyToClipboard('gave-info')">Copy</button>
-            </div>
-            <p id="gave-info">
-              Hello NAME,<br>
-              <br>
-              Thank you for providing that information! I've gone ahead and escalated this to our billing department for a ACTION. Our billing department will reach out to you soon with further information.<br>
-              <br>
-              Please feel free to reach out to us with any further questions or concerns.<br>
-              <br>
-              Thanks<br>
-              YOURNAME<br>
-              cbdMD Support<br>
-            </p>
+        <div class="gave-info bg-dark">
+          <div class="internal-header">
+            <h3>Info Received, Escalated to Billing</h3>
+            <button class="copy-text" onclick="copyToClipboard('gave-info')">
+              Copy
+            </button>
+          </div>
+          <p id="gave-info">
+            Hello NAME,<br />
+            <br />
+            Thank you for providing that information! I've gone ahead and
+            escalated this to our billing department for a ACTION. Our billing
+            department will reach out to you soon with further information.<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
+          </p>
         </div>
-        <hr>
+        <hr />
         <!-- THC test pass? -->
         <div class="thc-test">
-            <div class="internal-header">
-              <h3>Will I Pass a THC Test?</h3>
-              <button class="copy-text" onclick = "copyToClipboard('thc-test')">Copy</button>
-            </div>
-            <p id="thc-test">
-              Hello NAME,<br>
-              <br>
-              Thank you for contacting cbdMD! Our 3rd party lab results show no detectable amounts of THC, but there's a chance of trace amounts being present. It's important to look into the specific test and acceptable thresholds. We have several athletes and professionals who use our products and are tested daily. Nobody has ever tested positive for THC using our products alone.<br>
-              <br>
-              Unfortunately I am unable to answer explicitly yes or no, you will need to look into the type of test you are taking. Also, our products have no traces of THC, with THC-free defined as undetectable at the lowest level which is tested using labs.<br>
-              <br>
-              Please feel free to reach out to us with any further questions or concerns.<br>
-              <br>
-              Thanks<br>
-              YOURNAME<br>
-              cbdMD Support<br>
-            </p>
+          <div class="internal-header">
+            <h3>Will I Pass a THC Test?</h3>
+            <button class="copy-text" onclick="copyToClipboard('thc-test')">
+              Copy
+            </button>
+          </div>
+          <p id="thc-test">
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! Our 3rd party lab results show no
+            detectable amounts of THC, but there's a chance of trace amounts
+            being present. It's important to look into the specific test and
+            acceptable thresholds. We have several athletes and professionals
+            who use our products and are tested daily. Nobody has ever tested
+            positive for THC using our products alone.<br />
+            <br />
+            Unfortunately I am unable to answer explicitly yes or no, you will
+            need to look into the type of test you are taking. Also, our
+            products have no traces of THC, with THC-free defined as
+            undetectable at the lowest level which is tested using labs.<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
+          </p>
         </div>
-        <hr>
+        <hr />
         <!-- wholesale inquiry -->
-        <div class="wholesale">
-            <div class="internal-header">
-              <h3>Wholesale Inquiry</h3>
-              <button class="copy-text" onclick = "copyToClipboard('wholesale')">Copy</button>
-            </div> 
-            <p id="wholesale">
-              Hello NAME,<br>
-              <br>
-              Thank you for contacting cbdMD! If you are interested in wholesale, you can contact our sales department either at 1-800-910-1925 or wholesale@cbdmd.com<br>
-              <br>
-              You can also sign up for wholesale directly on our website here: https://www.cbdmd.com/bulk-wholesale-cbd<br>
-              <br>
-              Please feel free to reach out to us with any further questions or concerns.<br>
-              <br>
-              Thanks<br>
-              YOURNAME<br>
-              cbdMD Support<br>
-            </p> 
-        </div> 
-        <hr>
+        <div class="wholesale bg-dark">
+          <div class="internal-header">
+            <h3>Wholesale Inquiry</h3>
+            <button class="copy-text" onclick="copyToClipboard('wholesale')">
+              Copy
+            </button>
+          </div>
+          <p id="wholesale">
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! If you are interested in wholesale,
+            you can contact our sales department either at 1-800-910-1925 or
+            wholesale@cbdmd.com<br />
+            <br />
+            You can also sign up for wholesale directly on our website here:
+            https://www.cbdmd.com/bulk-wholesale-cbd<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
+          </p>
+        </div>
+        <hr />
         <!-- Sponsorship Inquiry -->
         <div class="sponsorship">
-            <div class="internal-header">
-              <h3>Sponsorship Inquiry</h3>
-              <button class="copy-text" onclick = "copyToClipboard('sponsorship')">Copy</button>
-            </div> 
-            <p id="sponsorship">
-              Hello NAME,<br>
-              <br>
-              Thank you for contacting cbdMD! I have gone ahead and forwarded your information to my supervisor for a sponsorship, and if she is interested she will reach out to you. In the meantime, you can also apply for affiliate status here: https://www.cbdmd.com/affiliate-program<br>
-              <br>
-              Please feel free to reach out to us with any further questions or concerns.<br>
-              <br>
-              Thanks<br>
-              YOURNAME<br>
-              cbdMD Support<br>
-            </p>
+          <div class="internal-header">
+            <h3>Sponsorship Inquiry</h3>
+            <button class="copy-text" onclick="copyToClipboard('sponsorship')">
+              Copy
+            </button>
+          </div>
+          <p id="sponsorship">
+            Hello NAME,<br />
+            <br />
+            Thank you for contacting cbdMD! I have gone ahead and forwarded your
+            information to my supervisor for a sponsorship, and if she is
+            interested she will reach out to you. In the meantime, you can also
+            apply for affiliate status here:
+            https://www.cbdmd.com/affiliate-program<br />
+            <br />
+            Please feel free to reach out to us with any further questions or
+            concerns.<br />
+            <br />
+            Thanks<br />
+            YOURNAME<br />
+            cbdMD Support<br />
+          </p>
         </div>
       </section>
     </main>
@@ -584,10 +815,18 @@
         <a href="#top" class="back-to-top">Back to top</a>
       </div>
       <div>
-        <p>Developed by <a class="git-link" href="https://github.com/honath" target="_blank">Alexander Cooper.</a></p>
+        <p>
+          Developed by
+          <a class="git-link" href="https://github.com/honath" target="_blank"
+            >Alexander Cooper.</a
+          >
+        </p>
       </div>
       <div>
-        <p>For use exclusively for the customer service department of cbdMD, located in Charlotte, NC</p>
+        <p>
+          For use exclusively for the customer service department of cbdMD,
+          located in Charlotte, NC
+        </p>
       </div>
     </footer>
     <script src="script.js"></script>

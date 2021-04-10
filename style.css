@@ -1,125 +1,156 @@
-*
-{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: Montserrat, sans-serif;
 }
 
-._hidden
-{
+._hidden {
   display: none;
 }
 
-hr
-{
+hr {
   background-color: rgb(150, 150, 150);
   border-color: rgb(150, 150, 150);
   border-radius: 50%;
 }
 
-/* Primary containers */
-/* ------------------ */
-header
-{
-  justify-content: center;
-  background-color: #00B2E3;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  padding: 2rem 0;
+html {
+  scroll-behavior: smooth;
 }
 
-main
-{
+/* Primary containers */
+/* ------------------ */
+header {
+  width: 100%;
+  text-align: center;
+}
+
+main {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   justify-content: center;
   width: 80%;
-  height: auto;
-  min-height: 50;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem 0;
   background-color: #fff;
 }
 
-footer
-{
+main > section > div {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1F2F64;
+  background-color: #1f2f64;
   color: rgb(212, 212, 212);
   height: 7rem;
   width: 100%;
   padding: 2rem, auto;
   margin: 3rem, auto;
-  font-size: .5rem;
+  font-size: 0.5rem;
+}
+
+nav {
+  background-color: #00b2e3;
+  padding-bottom: 5px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+#separator {
+  width: 80%;
+  height: 1px;
+  background: black;
+  margin: auto;
+  margin-bottom: 5px;
 }
 /* ------------------ */
 
-section > div
-{
+section > div {
   padding: 10px;
 }
 
 /* header */
 /* ------------------ */
-#disclaimer
-{
-  color: #fff;
+.heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10rem;
+  padding-top: 3.3rem;
+  border-bottom: black;
 }
 
-.categories
-{
+#logo {
+  filter: drop-shadow(10px 10px 10px);
+  margin-left: 5%;
+}
+
+#disclaimer {
+  color: rgb(39, 39, 39);
+  margin-right: 5%;
+}
+
+.categories {
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   display: flex;
   list-style: none;
-  padding: 1rem 0 0 0;
+  margin-right: 15%;
+  margin-left: 15%;
   
 }
 
-.cat-btns
-{
-  width: fit-content;
-  margin: 0 1rem;
-  padding: 3px;
-  border: 3px solid #000;
+.categories li {
+  width: 100%;
+  
+}
+
+.cat-btns {
+  width: 100%;
+  margin-top: 5px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   border-style: none;
-  background-color: transparent;
+  background-color: #00B2E3;
   text-decoration: none;
-  border-radius: 10%;
-  transition-duration: 0.1s;
+  transition: 0.5s;
 }
 
-.cat-btns:hover
-{
+.cat-btns:hover {
   cursor: pointer;
+  background-color: #00c0f5;
 }
 
-.cat-btns:focus
-{
+.cat-btns:focus {
   outline: none;
 }
 /* ------------------ */
 
 /* "Header" containers for each email template, with copy btn inside main */
 /* ------------------ */
-.internal-header
-{
+.bg-dark {
+  background-color: rgb(240, 240, 240);
+}
+
+.internal-header {
   display: flex;
   align-items: center;
   margin: 3px 0;
 }
 
-.internal-header > h3
-{
+.internal-header > h3 {
   width: fit-content;
   margin: 0 auto 0 0;
 }
 
-.internal-header > button
-{
+.internal-header > button {
   width: fit-content;
   margin: 0;
   padding: 3px;
@@ -130,8 +161,7 @@ section > div
   transition-duration: 0.15s;
 }
 
-.internal-header > button:hover
-{
+.internal-header > button:hover {
   background-color: skyblue;
   color: white;
   cursor: pointer;
@@ -140,31 +170,44 @@ section > div
 
 /* footer */
 /* ------------------ */
-.back-to-top:link {color: rgb(255, 255, 255)}
-.back-to-top:visited {color: rgb(255, 255, 255)}
-.back-to-top:hover {color: rgb(241, 241, 241)}
-.back-to-top:active {color: rgb(223, 223, 223)}
-
-.back-to-top
-{
-  font-size: .75rem;
-  padding: .5rem, 0;
-  margin: .5rem;
+.back-to-top:link {
+  color: rgb(255, 255, 255);
+}
+.back-to-top:visited {
+  color: rgb(255, 255, 255);
+}
+.back-to-top:hover {
+  color: rgb(241, 241, 241);
+}
+.back-to-top:active {
+  color: rgb(223, 223, 223);
 }
 
-.git-link:link {color: rgb(212, 212, 212)}
-.git-link:visited {color: rgb(212, 212, 212)}
-.git-link:hover {color: rgb(255, 255, 255)}
-.git-link:active {color: rgb(223, 223, 223)}
+.back-to-top {
+  font-size: 0.75rem;
+  padding: 0.5rem, 0;
+  margin: 0.5rem;
+}
 
-.git-link
-{
+.git-link:link {
+  color: rgb(212, 212, 212);
+}
+.git-link:visited {
+  color: rgb(212, 212, 212);
+}
+.git-link:hover {
+  color: rgb(255, 255, 255);
+}
+.git-link:active {
+  color: rgb(223, 223, 223);
+}
+
+.git-link {
   text-decoration: none;
 }
 
-footer > div
-{
-  padding: 2rem, auto; 
+footer > div {
+  padding: 2rem, auto;
   margin: 2rem, 1rem;
   justify-content: center;
   display: flex;
